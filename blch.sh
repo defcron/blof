@@ -13,7 +13,6 @@ generate_blch_crumb() {
     return $?
 }
 
-
 blch() {
     if [ "$1" = "-x" ] || [ "$1" = "x" ]; then
         shift
@@ -51,7 +50,6 @@ blch() {
 
 	if [ "$bit0" != "0" -a "$bit0" != "1" ]; then
             echo "error: ${BLCH_CRUMB}" 1>&2
-        
 	    return 1
         fi
 
@@ -61,7 +59,6 @@ blch() {
     
     # Default mode
     "$0" c $@ < <("$0" c $@ < "$0")
-
     return $?
 }
 
